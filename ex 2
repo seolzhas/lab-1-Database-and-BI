@@ -1,0 +1,25 @@
+CREATE TABLE employee_salary (
+    employee_id INT,
+    department_id INT,
+    salary DECIMAL(10, 2)
+);
+
+INSERT INTO employee_salary (employee_id, department_id, salary) VALUES
+(1, 101, 5000.00),
+(2, 101, 5500.00),
+(3, 101, 6000.00),
+(4, 102, 7000.00),
+(5, 102, 7500.00),
+(6, 103, 4000.00),
+(7, 103, 4500.00),
+(8, 103, 4800.00),
+(9, 104, 6200.00),
+(10, 104, 6400.00),
+(11, 105, 5300.00),
+(12, 105, 5200.00);
+
+
+SELECT department_id, AVG(salary) AS average_salary
+FROM employee_salary
+GROUP BY department_id
+ORDER BY average_salary DESC;
