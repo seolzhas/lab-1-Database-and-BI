@@ -1,26 +1,26 @@
 CREATE TABLE monthly_sales (
     year INT,
     month INT,
-    total_sales DECIMAL(10, 2),
+    total_sales INT,
     region VARCHAR(50)
 );
 
 INSERT INTO monthly_sales (year, month, total_sales, region) VALUES
-(2023, 1, 5000.00, 'North'),
-(2023, 1, 3000.00, 'South'),
-(2023, 2, 4000.00, 'North'),
-(2023, 2, 2500.00, 'South'),
-(2023, 3, 6000.00, 'North'),
-(2023, 3, 3500.00, 'South'),
-(2023, 1, 4500.00, 'East'),
-(2023, 2, 3200.00, 'East'),
-(2023, 3, 4800.00, 'East'),
-(2024, 1, 5500.00, 'North'),
-(2024, 1, 4200.00, 'South'),
-(2024, 2, 6200.00, 'North'),
-(2024, 2, 4700.00, 'South'),
-(2024, 3, 7000.00, 'North'),
-(2024, 3, 5100.00, 'South');
+(2023, 1, 5000, 'North'),
+(2023, 1, 3000, 'South'),
+(2023, 2, 4000, 'North'),
+(2023, 2, 2500, 'South'),
+(2023, 3, 6000, 'North'),
+(2023, 3, 3500, 'South'),
+(2023, 1, 4500, 'East'),
+(2023, 2, 3200, 'East'),
+(2023, 3, 4800, 'East'),
+(2024, 1, 5500, 'North'),
+(2024, 1, 4200, 'South'),
+(2024, 2, 6200, 'North'),
+(2024, 2, 4700, 'South'),
+(2024, 3, 7000, 'North'),
+(2024, 3, 5100, 'South');
 
 SELECT year, month, region, SUM(total_sales) AS total_sales_for_period
 FROM monthly_sales
